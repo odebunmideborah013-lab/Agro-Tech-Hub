@@ -366,7 +366,7 @@ body{
     text-align: center;
     align-items: center;
     display: flex;
-    background-image: url(/asset/farm.jpg);
+    background-image: url(../asset/farm.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
