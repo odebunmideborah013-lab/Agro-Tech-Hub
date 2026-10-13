@@ -844,7 +844,7 @@ body{
     text-align: center;
      background-color: black; 
     
-     background-image: url(/asset/farm.jpg); 
+     background-image: url(../asset/farm.jpg); 
     background-size: cover;
     background-position: center;
     height: 100vh;
