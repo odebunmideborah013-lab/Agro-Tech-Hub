@@ -121,7 +121,7 @@ body{
     height: 100vh;
     min-height: 600px;
     
-    background-image: url(/asset/contact.jpg);
+    background-image: url(../asset/contact.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
