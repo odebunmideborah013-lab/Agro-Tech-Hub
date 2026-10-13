@@ -1,0 +1,589 @@
+/* universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* navbar */
+.head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+    padding: 10px 52px;
+   
+    padding: 0.6;
+     z-index: 10; 
+}
+
+.head-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.head-list{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 32px;
+}
+
+.head-list a{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.head-list a span{
+    color: #39ff14;
+}
+
+.pri-btn{
+    background-color: green;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 14px; 
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .inner-page .head {
+        position: relative;
+        flex-direction: column;   /* logo on top, links below */
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+        padding: 12px 16px;
+        background-color: #2e6c2e;
+    }
+
+    .inner-page .head img {
+        height: 80px;             /* shrink the logo */
+        width: 100px auto;
+    }
+
+    .inner-page .head-right,
+    .inner-page .head-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .inner-page .head-list a {
+        font-size: 15px;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    .inner-page .articles,
+    .inner-page .contact-section {
+        padding-top: 30px;
+    }
+}
+/* Articles section */
+.articles{
+    margin-top: 80px;
+    padding: 70px 6%;
+    background: #fff;
+}
+
+.articles h2{
+    text-align: center;
+    font-size: 55px;
+    color: #2f7d32;
+    margin-bottom: 10px;
+}
+
+.section-text{
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.article-card{
+    position: relative;
+}
+
+.article-card:hover{
+    transform: translateY(-8px);
+}
+
+.article-card img{
+    width: 100%;
+    height: 240px;
+     object-fit: cover;
+    display: block; 
+}
+
+.article-content{
+    background: #fffefe;
+    width: 95%;
+    margin: -40px auto 0;
+    position: relative;
+    padding: 35px 30px;
+    min-height: 300px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+.article-content h3{
+    color: #4caf50;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.article-content p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* tablets: 2 columns */
+@media (max-width: 900px) {
+    .articles {
+        padding: 50px 5%;
+        margin-top: 40px;
+    }
+    .articles h2 { font-size: 42px; }
+    .section-text { font-size: 18px; }
+
+    .article-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* phones: 1 column */
+@media (max-width: 600px) {
+    .articles {
+        padding: 10px 1px 0px; /* top padding clears an absolute navbar; reduce if yours isn't */
+        margin-top: 0;
+    }
+
+    .articles h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .section-text {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .article-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .article-card img { height: 200px; }
+
+    .article-content {
+        width: 92%;
+        margin-top: -30px;
+        padding: 22px 18px;
+        min-height: auto; /* let the card fit its text instead of forcing 300px */
+    }
+
+    .article-content h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+
+    .article-content p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+}
+
+/* phones have no hover, so skip the lift effect there */
+@media (hover: none) {
+    .article-card:hover { transform: none; }
+}
+
+/* introduction */
+.welcome h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+     color: rgb(46, 108, 46);
+    font-size: 50px;
+    margin-top: 80px;
+}
+
+.welcome p{
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: rgb(77, 115, 77);
+    font-style: italic;
+}
+
+.welcome-grid{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.welcome-card{
+     border-radius: 16px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.welcome-card img{
+    width: 60px;
+    height: 60px;
+    border: 2px solid green;
+    border-radius: 200px;
+}
+
+.welcome-card h2{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* ===== MOBILE WELCOME SECTION ===== */
+
+@media screen and (max-width: 768px) {
+
+    .welcome {
+        padding: 20px 15px;
+    }
+
+    .welcome h1 {
+        font-size: 32px;
+        margin-top: 40px;
+        line-height: 1.3;
+    }
+
+    .welcome p {
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 0 5px;
+    }
+
+    .welcome-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 25px;
+    }
+
+    .welcome-card {
+        width: 100%;
+        padding: 20px 15px;
+        margin-bottom: 10px;
+    }
+
+    .welcome-card img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .welcome-card h2 {
+        font-size: 21px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .welcome-card p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+/* ===== SMALL PHONES ===== */
+
+@media screen and (max-width: 480px) {
+
+    .welcome h1 {
+        font-size: 27px;
+        margin-top: 30px;
+    }
+
+    .welcome-card {
+        padding: 15px 10px;
+    }
+
+    .welcome-card h2 {
+        font-size: 19px;
+    }
+}
+
+
+.setting-text{
+    color: rgb(235, 230, 230);
+    margin-top: 20px;
+}
+
+.setting-text h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1.5s ease;
+}
+
+.setting-text p{
+     font-size: 18px;
+    line-height: 1.5;
+    animation: fadeInDown 2.3s ease;
+}
+
+.setting {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background-image: url(/asset/farm.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    /* margin-bottom: 60px; */
+    overflow: hidden;
+}
+
+
+.setting::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.384); */
+    z-index: 1;
+    margin-top: 90px;
+
+}
+
+.setting * {
+    position: relative;
+    z-index: 2;
+}
+
+.pri2-btn{
+    margin-top: 30px;
+   background-color: rgb(35, 181, 35);
+    border-radius: 5px;
+    border: none;
+    padding: 15px 30px; 
+    color: #fff;
+}
+
+.pri2-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .setting {
+        position: relative;              /* keeps the overlay inside this section */
+        height: auto;
+        min-height: 70vh;                /* 100vh is too tall on phones */
+        padding: 60px 20px;
+        margin-bottom: 40px;
+        background-attachment: scroll;   /* "fixed" is buggy on mobile browsers */
+    }
+
+    .setting::before {
+        margin-top: 0;
+        background: rgba(0, 0, 0, 0.5);  /* dark overlay so the text is readable */
+    }
+
+    .setting-text {
+        margin-top: 0;
+    }
+
+    .setting-text h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .setting-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .setting {
+        padding: 50px 15px;
+    }
+
+    .setting-text h1 {
+        font-size: 24px;
+    }
+
+    .setting-text p {
+        font-size: 14px;
+    }
+}
+
+
+.pri2-btn{
+    margin-top: 30px;
+   background-color: rgb(35, 181, 35);
+    border-radius: 5px;
+    border: none;
+    padding: 15px 30px; 
+    color: #fff;
+}
+
+.pri2-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* footer */
+footer{
+    padding: 50px 50px;
+    background-color: black;
+}
+
+footer img{
+    width: 200px;
+    
+}
+.Top-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.Top-footer h3{
+    max-width: 300px;
+    font-weight: 200px;
+}
+.second-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.footer-title h2{
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-title ul li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+footer hr{
+    color: antiquewhite;
+    margin-bottom: 20px;
+}
+
+footer i{
+    border: 1px solid white;
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 35px 20px;
+    }
+
+    .Top-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 0 0 20px;
+    }
+
+    .Top-footer h3 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .second-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* Pages | Content */
+        gap: 25px 20px;
+        width: 100%;
+        align-items: start;
+    }
+
+    /* Contact-us (the 3rd column) takes the full row */
+    .second-footer .footer-title:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-title h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-title ul {
+        padding-left: 0;
+    }
+
+    .footer-title ul li {
+        font-size: 15px;
+        word-break: break-word;           /* stops the long email from overflowing */
+    }
+
+    footer img {
+        width: 150px;
+    }
+
+    footer i {
+        margin-right: 12px;
+        padding: 8px;                     /* bigger tap target for social icons */
+    }
+}
+
+@media (max-width: 400px) {
+    .second-footer {
+        grid-template-columns: 1fr;       /* everything in one column on tiny phones */
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+

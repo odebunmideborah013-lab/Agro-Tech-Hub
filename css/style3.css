@@ -1,0 +1,484 @@
+/* universal selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* navbar */
+.head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+    padding: 10px 52px;
+   
+    padding: 0.6;
+    z-index: 10;
+}
+
+.head-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.head-list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 32px;
+}
+
+.head-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.pri-btn {
+    background-color: green;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 14px;
+    color: #fff;
+}
+
+
+/* ===== MOBILE HEADER LAYOUT ===== */
+
+@media screen and (max-width: 768px) {
+
+    .head {
+        height: auto;
+        min-height: 80px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .head-right {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .head-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .head-list a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .head {
+        padding: 12px;
+    }
+
+    .head-right {
+        gap: 10px;
+    }
+
+    .head-list {
+        gap: 12px;
+    }
+
+    .head-list a {
+        font-size: 13px;
+    }
+} 
+
+
+/* herosection */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     /* background: #a73a3a;  */
+     background-color: rgba(216, 64, 64, 0); 
+    color: white;  
+    /* margin-bottom: 100px; */
+    padding: 0  0; 
+    position: relative;
+    overflow: hidden; 
+    height: 100vh;
+    min-height: 600px;
+    
+    background-image: url(/asset/contact.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 0;
+    margin-bottom: 60px;
+    margin-top: 100px;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 90px;
+    font-weight: bolder;
+    color: white;
+}
+
+.hero-text p{
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    padding: 12px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+     background-color: rgba(2, 28, 22, 0.5);
+}
+
+/* ===== MOBILE HERO SECTION ===== */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 15px 40px;
+    }
+
+    .hero-vid {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    .hero-text > p:first-child {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        line-height: 1.25;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .hero-text span {
+        max-width: 80px;
+    }
+
+    .overlay {
+        background-color: rgba(2, 28, 22, 0.55);
+    }
+}
+
+/* Smaller phones */
+@media screen and (max-width: 480px) {
+
+    .hero {
+        min-height: 85vh;
+        padding: 90px 12px 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 27px;
+    }
+
+    .hero-text > p:first-child {
+        font-size: 16px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+} 
+
+
+/* form section */
+.contact-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 80px 8%;
+     /* background-color: #f5f7f2;  */
+     margin-top: 30px;
+}
+
+.contact-form{
+    width: 50%;
+    /* padding: 30px; */
+}
+
+.contact-form h1{
+    font-size:30px;
+    margin-bottom: 60px;
+    color: rgb(73, 194, 73);
+}
+
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 18px ;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea{
+    width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 60px;
+}
+
+.contact-form button{
+    background-color: green;
+    border-radius: 20px;
+    border: none;
+     padding: 10px 14px;  
+    color: #fff;
+    margin-top: 20px; 
+}
+
+.contact-info{
+    width: 35%;
+}
+
+.contact-info h1{
+    font-size: 35px;
+    color: rgb(73, 194, 73);
+    margin-bottom: 40px;
+}
+
+.contact-info h3{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #1f3d2b;
+}
+
+.contact-info p{
+    line-height: 1.7;
+    color: #555;
+}
+
+/* tablets */
+@media (max-width: 900px) {
+    .contact-section {
+        gap: 30px;
+        padding: 60px 5%;
+    }
+    .contact-form { width: 55%; }
+    .contact-info { width: 40%; }
+    .contact-info h1 { font-size: 28px; }
+}
+
+/* phones */
+@media (max-width: 600px) {
+    .contact-section {
+        flex-direction: column; /* form on top, info below */
+        gap: 40px;
+        padding: 130px 20px 40px; /* top padding clears the navbar, if yours is absolute here too */
+        margin-top: 0;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .contact-form form { gap: 14px; }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 14px;
+        font-size: 16px; /* 16px stops iPhones zooming in on tap */
+    }
+
+    .contact-form textarea {
+        height: 130px; /* 60px is too short to type a message on a phone */
+        resize: vertical;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .contact-info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .contact-info h3 { margin-top: 20px; }
+
+    .contact-info p {
+        font-size: 15px;
+        word-break: break-word; /* stops the long email address overflowing */
+    }
+}
+/* footer */
+footer {
+    padding: 50px 50px;
+    background-color: rgb(97, 182, 97);
+}
+
+footer img {
+    width: 200px;
+}
+
+.Top-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.Top-footer h3 {
+    max-width: 300px;
+    font-weight: 200px;
+}
+
+.second-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.footer-title h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.footer-title ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+footer hr {
+    color: antiquewhite;
+    margin-bottom: 20px;
+}
+
+footer i {
+    border: 1px solid green;
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 35px 20px;
+    }
+
+    .Top-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 0 0 20px;
+    }
+
+    .Top-footer h3 {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .second-footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* Pages | Content */
+        gap: 25px 20px;
+        width: 100%;
+        align-items: start;
+    }
+
+    /* Contact-us (the 3rd column) takes the full row */
+    .second-footer .footer-title:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-title h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-title ul {
+        padding-left: 0;
+    }
+
+    .footer-title ul li {
+        font-size: 15px;
+        word-break: break-word;           /* stops the long email from overflowing */
+    }
+
+    footer img {
+        width: 150px;
+    }
+
+    footer i {
+        margin-right: 12px;
+        padding: 8px;                     /* bigger tap target for social icons */
+    }
+}
+
+@media (max-width: 400px) {
+    .second-footer {
+        grid-template-columns: 1fr;       /* everything in one column on tiny phones */
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
